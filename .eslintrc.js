@@ -4,7 +4,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
@@ -13,5 +13,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/@typescript-eslint',
   ],
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-unnecessary-condition': 'error',
+  },
 };
